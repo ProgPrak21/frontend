@@ -43,7 +43,7 @@ const Fetch = () => {
   };
 
   const sendToServer = () => {
-    let data = { emailAddress: email, firstName: "Majed" };
+    let data = { emailAddress: email, firstName: name };
     if (!name) return setError("Please provide a Name");
     if (!email.includes("@")) return setError("Not a Valid email address");
     setError("");
