@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { Button, TextField, makeStyles } from "@material-ui/core";
+import {
+  Button,
+  TextField,
+  makeStyles,
+  CircularProgress,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -22,6 +27,7 @@ const Fetch = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [response, setResponse] = useState("");
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const handleChange = (event) => {
@@ -41,7 +47,8 @@ const Fetch = () => {
     if (!name) return setError("Please provide a Name");
     if (!email.includes("@")) return setError("Not a Valid email address");
     setError("");
-    const url = "http://35.228.32.56:8080/email";
+    setLoading(true);
+    const url = "https://datainfo.gwhy.de/email";
     console.log(JSON.stringify(data));
     fetch(url, {
       method: "POST",
@@ -56,6 +63,7 @@ const Fetch = () => {
       })
       .then((result) => {
         setResponse(result);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
@@ -105,6 +113,11 @@ const Fetch = () => {
         </form>
       </div>
       {error && <div className={classes.text}>{error}</div>}
+      {loading && (
+        <div>
+          <CircularProgress />
+        </div>
+      )}
       {response && (
         <div className={classes.text}>
           The response from the server is: <br />
