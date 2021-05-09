@@ -26,7 +26,7 @@ const Navbar = ({ setComp }) => {
       <button className={classes.button} onClick={() => setComp("home")}>
         Home
       </button>
-      <button className={classes.button} onClick={() => setComp("about")}>
+      <button className={classes.button} >
         About
       </button>
     </div>

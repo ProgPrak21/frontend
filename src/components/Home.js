@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Home = () => {
+const Home = ({ setComp }) => {
   const classes = useStyles();
 
   return (
@@ -71,7 +71,7 @@ const Home = () => {
         aliqua fugiat et pariatur consectetur reprehenderit fugiat pariatur
         commodo
       </p>
-      <button className={classes.button}>click here</button>
+      <button className={classes.button} onClick={() => setComp("about")}>click here to send email</button>
     </div>
   );
 };

@@ -10,8 +10,9 @@ function App() {
   return (
     <div className="App">
       <Navbar setComp={setComp} />
-      {comp === "home" && <Home />}
+      {comp === "home" && <Home setComp={setComp}/>}
       {comp === "about" && <Test />}
+      
       <header className="App-header">
         <Fetch />
       </header>
