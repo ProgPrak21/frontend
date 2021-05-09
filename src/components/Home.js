@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   home: {
     height: "100vh",
-    minHeight: "100vh",
+    minHeight: "100vh"
   },
 }));
 
@@ -81,7 +81,7 @@ const Home = ({ setComp }) => {
         aliqua fugiat et pariatur consectetur reprehenderit fugiat pariatur
         commodo
       </p>
-      <button className={classes.button} onClick={() => setComp("about")}>click here to send email</button>
+      <button className={classes.button} onClick={() => setComp("fetch")}>click here to send email</button>
     </div>
   );
 };
