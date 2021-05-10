@@ -20,19 +20,16 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: "#5aadaa",
   },
-  acronym:{
-      fontSize:"60px",
-      
-
+  acronym: {
+    fontSize: "60px",
   },
-  subtitle:{
-      fontSize:"30px",
-      color: "#5aadaa"
-
+  subtitle: {
+    fontSize: "30px",
+    color: "#5aadaa",
   },
   home: {
     height: "100vh",
-    minHeight: "100vh"
+    minHeight: "100vh",
   },
 }));
 
@@ -58,8 +55,13 @@ const Home = ({ setComp }) => {
       >
         <source src={vid} type="video/mp4" />
       </video>
-      <h1 className={classes.title}><b className={classes.acronym}>D</b>ata <b className={classes.acronym}>A</b>ccess <b className={classes.acronym}>R</b>equest <b className={classes.acronym}>A</b>nalysis </h1>
-        <h2 className={classes.subtitle}>Our Mission</h2>
+      <h1 className={classes.title}>
+        <b className={classes.acronym}>D</b>ata{" "}
+        <b className={classes.acronym}>A</b>ccess{" "}
+        <b className={classes.acronym}>R</b>equest{" "}
+        <b className={classes.acronym}>A</b>nalysis{" "}
+      </h1>
+      <h2 className={classes.subtitle}>Our Mission</h2>
       <p className={classes.text}>
         ad nulla adipisicing consequat ex ut id quis aliquip elit nostrud
         consequat reprehenderit magna et duis Lorem culpa adipisicing do do
@@ -81,7 +83,9 @@ const Home = ({ setComp }) => {
         aliqua fugiat et pariatur consectetur reprehenderit fugiat pariatur
         commodo
       </p>
-      <button className={classes.button} onClick={() => setComp("fetch")}>click here to send email</button>
+      <button className={classes.button} onClick={() => setComp("fetch")}>
+        click here to send email
+      </button>
     </div>
   );
 };
