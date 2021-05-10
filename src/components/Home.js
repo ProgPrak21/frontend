@@ -61,31 +61,11 @@ const Home = ({ setComp }) => {
         <b className={classes.acronym}>R</b>equest{" "}
         <b className={classes.acronym}>A</b>nalysis{" "}
       </h1>
-      <h2 className={classes.subtitle}>Our Mission</h2>
+      <h2 className={classes.subtitle}>Subtite</h2>
       <p className={classes.text}>
-        ad nulla adipisicing consequat ex ut id quis aliquip elit nostrud
-        consequat reprehenderit magna et duis Lorem culpa adipisicing do do
-        aliqua est ex excepteur ipsum ut labore reprehenderit consectetur dolore
-        pariatur mollit mollit exercitation anim quis do enim sint exercitation
-        excepteur amet id consequat non sit dolor in irure pariatur enim veniam
-        eu fugiat non labore dolore irure cupidatat mollit officia consectetur
-        dolore et dolor incididunt do aliqua fugiat et pariatur consectetur
-        reprehenderit fugiat pariatur commodo ad nulla adipisicing consequat ex
-        ut id quis aliquip elit nostrud consequat reprehenderit magna et duis
-        Lorem culpa adipisicing do do aliqua est ex excepteur consectetur do
-        cupidatat eu non nulla ut enim labore in eu ut fugiat cupidatat laborum
-        cupidatat et aute tempor nostrud fugiat cupidatat minim consequat ipsum
-        ut labore reprehenderit consectetur dolore pariatur mollit mollit
-        exercitation anim quis do enim sint exercitation excepteur amet id
-        consequat incididunt ea nisi adipisicing quis nostrud proident culpa non
-        sit dolor in irure pariatur enim veniam eu fugiat non labore dolore
-        irure cupidatat mollit officia consectetur dolore et dolor incididunt do
-        aliqua fugiat et pariatur consectetur reprehenderit fugiat pariatur
-        commodo
+        Cool Text
       </p>
-      <button className={classes.button} onClick={() => setComp("fetch")}>
-        click here to send email
-      </button>
+      
     </div>
   );
 };

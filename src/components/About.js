@@ -3,6 +3,9 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    display:"flex",
+    flexDirection:"column",
+    alignItems:"center",
     backgroundColor: "black",
     height: "100vh",
     minHeight: "100vh",
@@ -18,22 +21,19 @@ const useStyles = makeStyles((theme) => ({
     borderColor: "#5aadaa",
     width: "300px",
     height: "300px",
-    position: "fixed",
-    top: "20%",
-    left: "38%",
+    
   },
   text: {
     color: "white",
-    position: "fixed",
+    
     width: "50%",
-    left: "25%",
+    
   },
   text2: {
     color: "white",
-    position: "fixed",
+    
     width: "50%",
-    left: "25%",
-    top: "50%",
+    
   },
 }));
 

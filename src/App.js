@@ -6,7 +6,7 @@ import { useState } from "react";
 import About from "./components/About";
 
 function App() {
-  const [comp, setComp] = useState("");
+  const [comp, setComp] = useState("home");
 
   return (
     <div className="App">
