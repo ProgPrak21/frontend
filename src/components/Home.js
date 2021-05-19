@@ -1,5 +1,5 @@
 import React from "react";
-import vid from "./video/video.mp4";
+import vid from "../lib/video/video.mp4";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
