@@ -1,5 +1,4 @@
 import "./App.css";
-import Fetch from "./components/Fetch";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import { useState } from "react";
@@ -13,13 +12,6 @@ function App() {
       <Navbar setComp={setComp} />
       {comp === "home" && <Home setComp={setComp} />}
       {comp === "about" && <About />}
-      {comp === "fetch" && (
-        <div>
-          <header className="App-header">
-            <Fetch />
-          </header>
-        </div>
-      )}
     </div>
   );
 }

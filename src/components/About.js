@@ -3,12 +3,12 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    display:"flex",
-    flexDirection:"column",
-    alignItems:"center",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
     backgroundColor: "black",
-    height: "100vh",
-    minHeight: "100vh",
+    height: "90vh",
+    minHeight: "90vh",
   },
   title: {
     color: "#5aadaa",
@@ -21,19 +21,16 @@ const useStyles = makeStyles((theme) => ({
     borderColor: "#5aadaa",
     width: "300px",
     height: "300px",
-    
   },
   text: {
     color: "white",
-    
+
     width: "50%",
-    
   },
   text2: {
     color: "white",
-    
+
     width: "50%",
-    
   },
 }));
 

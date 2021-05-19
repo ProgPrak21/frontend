@@ -28,8 +28,8 @@ const useStyles = makeStyles((theme) => ({
     color: "#5aadaa",
   },
   home: {
-    height: "100vh",
-    minHeight: "100vh",
+    height: "90vh",
+    minHeight: "90vh",
   },
 }));
 
@@ -62,10 +62,7 @@ const Home = ({ setComp }) => {
         <b className={classes.acronym}>A</b>nalysis{" "}
       </h1>
       <h2 className={classes.subtitle}>Subtite</h2>
-      <p className={classes.text}>
-        Cool Text
-      </p>
-      
+      <p className={classes.text}>Cool Text</p>
     </div>
   );
 };
