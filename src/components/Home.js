@@ -1,5 +1,6 @@
 import React from "react";
 import vid from "../lib/video/video.mp4";
+import Upload from "./Upload";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Home = ({ setComp }) => {
+const Home = () => {
   const classes = useStyles();
 
   return (
@@ -63,6 +64,7 @@ const Home = ({ setComp }) => {
       </h1>
       <h2 className={classes.subtitle}>Subtite</h2>
       <p className={classes.text}>Cool Text</p>
+      <Upload />
     </div>
   );
 };
