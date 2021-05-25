@@ -10,15 +10,6 @@ const useStyles = makeStyles((theme) => ({
 const Upload = () => {
   const classes = useStyles();
 
-  async function fileToJSON(file) {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.onload = (event) => resolve(JSON.parse(event.target.result));
-      fileReader.onerror = (error) => reject(error);
-      fileReader.readAsText(file);
-    });
-  }
-
   async function uploadFile(file) {
     const json = JSON.stringify(file);
     const blob = new Blob([json], {
@@ -43,7 +34,6 @@ const Upload = () => {
 
   const changeHandler = async (event) => {
     console.log(event.target.files[0]);
-    // let test = await fileToJSON(event.target.files[0]);
     uploadFile(event.target.files[0]);
   };
 
