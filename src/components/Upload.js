@@ -18,7 +18,7 @@ const Upload = () => {
     const data = new FormData();
     data.append("facebook", blob);
 
-    await fetch("https://datainfo.gwhy.de/data/facebook/advertisement", {
+    await fetch("https://dara.gwhy.de/data/facebook/advertisement", {
       method: "POST",
       headers: {
         Accept: "application/json",
