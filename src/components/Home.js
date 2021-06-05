@@ -2,6 +2,7 @@ import React from "react";
 import vid from "../lib/video/video.mp4";
 import Upload from "./Upload";
 import { makeStyles } from "@material-ui/core";
+import DragDrop from "./DragDrop"
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -64,7 +65,8 @@ const Home = () => {
       </h1>
       <h2 className={classes.subtitle}>Subtite</h2>
       <p className={classes.text}>Cool Text</p>
-      <Upload />
+      <DragDrop/>
+     
     </div>
   );
 };
