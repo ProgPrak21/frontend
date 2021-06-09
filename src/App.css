@@ -1,5 +1,9 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap"); 
+
 .App {
   text-align: center;
+  background-color: black;
 }
 
 .App-logo {
@@ -37,3 +41,112 @@
     transform: rotate(360deg);
   }
 }
+/* Home/Landing page */
+/* text and headlines*/
+.maintitle{
+  font-family: 'Odibee Sans', cursive;
+  color:white;
+  margin: 0px;
+  font-size: 5em;
+  text-align: center;
+  padding-top: 100px;
+}
+.subTitle{
+  color:white;
+}
+.landingText {
+  color: white;
+  font-size: 20px;
+}
+.landingTitle {
+  color: white;
+  margin:0px;
+  padding:none;
+}
+/*containers and content */
+.landingAboveContainer {
+  background-image: url("lib/assets/darkImg.png");
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  padding-bottom: 4em;
+}
+
+.landingPitch1Container {
+  padding-top:70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  height: 90vh;
+  min-height: 90vh;
+  justify-content:center;
+  padding-bottom:100px;
+}
+
+.landingImg1{
+  margin-top:"40px";
+    width:500px;
+    height:auto;
+}
+.landingPitch2Container {
+  padding-top:70px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 90vh;
+  min-height: 90vh;
+  justify-content:space-around;
+  padding-bottom:100px;
+  padding-top:20px;
+}
+.landingImg2{
+  margin-right:20PX;
+    margin-bottom:20px;
+    width:45%;
+     height:auto;
+     max-height:90vh;
+}
+.LandingPitch3Container {
+  padding-top:70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  height: 90vh;
+  min-height: 80vh;
+  justify-content:space-around;
+  padding-bottom:100px;
+  padding-top:20px;
+  padding-right: 50px;
+  padding-right: 50px;
+}
+.landingImg3{
+    width:50%;
+    height:auto;
+     
+}
+.landingSolutionContainer{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  justify-content:space-around;
+  padding-bottom:20px;
+  padding-top:20px;
+  padding-right: 50px;
+  padding-left: 50px;
+
+}
+.landingSolutionCardsContainer{
+  display: flex;
+  justify-content:space-around;
+  align-items: strech;
+}
+.landingSolutionCard{
+  margin: 20px 20px 20px 20px;
+
+}
+
+

@@ -11,10 +11,10 @@ const baseStyle = {
     padding: '20px',
     borderWidth: 2,
     borderRadius: 2,
-    borderColor: '#eeeeee',
+    borderColor: 'grey',
     borderStyle: 'dashed',
     
-    color: '#bdbdbd',
+    color: 'black',
     outline: 'none',
     transition: 'border .24s ease-in-out'
   };
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   
   
   txt:{
-    color:"white"
+    color:"grey"
   }
 }));
 
@@ -73,11 +73,7 @@ const DragDrop = () => {
  
 
   
-  const changeHandler = async (event) => {
-    console.log(event.target.files[0]);
-    // let test = await fileToJSON(event.target.files[0]);
-    uploadFile(event.target.files[0]);
-  };
+
 
  
     const {acceptedFiles, getRootProps, getInputProps,isDragActive,
