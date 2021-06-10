@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
 import logo from "../lib/assets/logoModern2.png";
-import zIndex from "@material-ui/core/styles/zIndex";
 
 const useStyles = makeStyles((theme) => ({
   nav: {
