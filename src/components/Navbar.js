@@ -1,20 +1,30 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
+import logo from "../lib/assets/logoModern2.png";
+import zIndex from "@material-ui/core/styles/zIndex";
 
 const useStyles = makeStyles((theme) => ({
   nav: {
-    background: "black",
-    color: "white",
+    background: "white",
+    color: "grey",
     paddingTop: "10px",
-    paddingBottom: "10px",
+    paddingBottom: "0px",
+    position: "fixed",
+    zIndex: "1",
+    width: "100%",
   },
   button: {
-    color: "#5aadaa",
-    backgroundColor: "black",
+    color: "black",
+    background: "none",
     marginLeft: "5px",
-    fontSize: "20px",
+    marginRight: "5px",
+    fontSize: "1em",
     border: "none",
     fontWeight: "bold",
+    float: "left",
+  },
+  img: {
+    float: "left",
   },
 }));
 
@@ -23,12 +33,23 @@ const Navbar = ({ setComp }) => {
 
   return (
     <div className={classes.nav}>
+      <img
+        className={classes.img}
+        src={logo}
+        alt="logo"
+        width="6%"
+        height="auto"
+      />
+
       <button className={classes.button} onClick={() => setComp("home")}>
         Home
       </button>
-      <button className={classes.button} onClick={() => setComp("about")} >
+      <button className={classes.button} onClick={() => setComp("about")}>
         About
       </button>
+      <button className={classes.button}>Download</button>
+      <button className={classes.button}>Analyze</button>
+      <button className={classes.button}>Understand</button>
     </div>
   );
 };
