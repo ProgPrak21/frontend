@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { makeStyles, Button } from "@material-ui/core";
-
 import { useDropzone } from "react-dropzone";
+import Select from "./Select";
 
 const baseStyle = {
   flex: 1,
@@ -45,15 +45,17 @@ const useStyles = makeStyles((theme) => ({
 const DragDrop = () => {
   const classes = useStyles();
 
+  const [service, setService] = useState("facebook");
+
   async function uploadFile(file) {
     const json = JSON.stringify(file);
     const blob = new Blob([json], {
       type: "application/json",
     });
     const data = new FormData();
-    data.append("facebook", blob);
+    data.append(service, blob);
 
-    await fetch("https://dara.gwhy.de/data/facebook/advertisement", {
+    await fetch(`https://dara.gwhy.de/data/${service}/advertisement`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -117,14 +119,18 @@ const DragDrop = () => {
         <ul className={classes.txt}>{files}</ul>
       </aside>
 
-      <Button
-        onClick={upload}
-        variant="contained"
-        color="primary"
-        component="span"
-      >
-        Submit
-      </Button>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Select service={service} setService={setService} />
+
+        <Button
+          onClick={upload}
+          variant="contained"
+          color="primary"
+          component="span"
+        >
+          Submit
+        </Button>
+      </div>
     </div>
   );
 };
