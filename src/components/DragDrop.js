@@ -13,10 +13,11 @@ const baseStyle = {
   borderRadius: 2,
   borderColor: "grey",
   borderStyle: "dashed",
-
+  margin: "10px 10%",
   color: "black",
   outline: "none",
   transition: "border .24s ease-in-out",
+  cursor: "pointer",
 };
 const activeStyle = {
   borderColor: "#2196f3",
@@ -33,6 +34,9 @@ const rejectStyle = {
 };
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    paddingBottom: "40px",
+  },
   txt: {
     color: "grey",
   },
@@ -103,7 +107,7 @@ const DragDrop = () => {
   ));
 
   return (
-    <div>
+    <div className={classes.root}>
       <div {...getRootProps({ style })} className={classes.drop}>
         <input {...getInputProps()} />
         <p className={classes.txt}>drop file here or click to upload</p>
