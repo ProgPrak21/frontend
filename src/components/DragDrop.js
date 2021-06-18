@@ -48,8 +48,7 @@ const DragDrop = () => {
   const [service, setService] = useState("facebook");
 
   async function uploadFile(file) {
-    const json = JSON.stringify(file);
-    const blob = new Blob([json], {
+    const blob = new Blob([file], {
       type: "application/json",
     });
     const data = new FormData();
@@ -87,11 +86,6 @@ const DragDrop = () => {
     }
   }
 
-  // const onClick = async (event) => {
-  //   console.log(event.target.files[0]);
-  //   uploadFile(event.target.files[0]);
-  // };
-
   const style = useMemo(
     () => ({
       ...baseStyle,
@@ -112,7 +106,7 @@ const DragDrop = () => {
     <div className={classes.root}>
       <div {...getRootProps({ style })} className={classes.drop}>
         <input {...getInputProps()} />
-        <p className={classes.txt}>drop file here or click to upload</p>
+        <p className={classes.txt}>Drop file(s) here or click to upload</p>
       </div>
       <aside>
         <h4 className={classes.txt}>Files</h4>
