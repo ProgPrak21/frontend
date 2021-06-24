@@ -1,9 +1,10 @@
-import "./App.css";
+import { useState, useMemo } from "react";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import { useState, useMemo } from "react";
 import About from "./components/About";
+import "./App.css";
 
 function App() {
   const [comp, setComp] = useState("home");
@@ -18,13 +19,20 @@ function App() {
     []
   );
 
+  const client = new ApolloClient({
+    uri: "https://dara.gwhy.de/gui",
+    cache: new InMemoryCache(),
+  });
+
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <Navbar setComp={setComp} />
-        {comp === "home" && <Home setComp={setComp} />}
-        {comp === "about" && <About />}
-      </div>
+      <ApolloProvider client={client}>
+        <div className="App">
+          <Navbar setComp={setComp} />
+          {comp === "home" && <Home setComp={setComp} />}
+          {comp === "about" && <About />}
+        </div>
+      </ApolloProvider>
     </ThemeProvider>
   );
 }

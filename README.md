@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e645c38a-0e64-4056-a891-eea564f65381/deploy-status)](https://app.netlify.com/sites/dara-tuberlin/deploys)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

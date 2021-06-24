@@ -4,6 +4,7 @@ import maze from "../lib/assets/maze.jpg";
 import code from "../lib/assets/code.png";
 import { Button, Card, CardContent } from "@material-ui/core";
 import DragDrop from "./DragDrop";
+import UserData from "./UserData";
 
 const Home = () => {
   return (
@@ -105,6 +106,7 @@ const Home = () => {
       </div>
 
       <DragDrop />
+      <UserData />
     </div>
   );
 };
