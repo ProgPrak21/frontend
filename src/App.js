@@ -20,7 +20,7 @@ function App() {
   );
 
   const client = new ApolloClient({
-    uri: "https://dara.gwhy.de/gui",
+    uri: "https://dara.gwhy.de/graphql",
     cache: new InMemoryCache(),
   });
 
