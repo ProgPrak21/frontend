@@ -5,6 +5,7 @@ import code from "../lib/assets/code.png";
 import { Button, Card, CardContent } from "@material-ui/core";
 import DragDrop from "./DragDrop";
 import UserData from "./UserData";
+import {Link} from 'react-scroll'
 
 const Home = () => {
   return (
@@ -22,9 +23,11 @@ const Home = () => {
         <h2 className="subTitle">
           with the help of our all in one free toolkit
         </h2>
+        <Link to="solution" spy={true} smooth={true}>
         <Button variant="contained" color="primary">
           Get Started
         </Button>
+        </Link>
       </div>
 
       <div className="landingPitch1Container">
@@ -68,13 +71,13 @@ const Home = () => {
         </p>
         <img src={code} alt="code" className="landingImg3" />
       </div>
-      <div className="landingSolutionContainer">
+      <div className="landingSolutionContainer" id="solution">
         <div>
           <h1 className="landingTitle">We have a solution for you!</h1>
 
           <p className="landingText">in just 3 Steps</p>
         </div>
-        <div className="landingSolutionCardsContainer">
+        <div className="landingSolutionCardsContainer" >
           <Card className="landingSolutionCard">
             <h2>1.Download our Extension</h2>
             <CardContent>
