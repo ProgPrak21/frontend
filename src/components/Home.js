@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useRef} from "react";
 import worldSocialCircle from "../lib/assets/worldSocialCircle2.jpg";
 import maze from "../lib/assets/maze.jpg";
 import code from "../lib/assets/code.png";
@@ -8,9 +8,15 @@ import UserData from "./UserData";
 import {Link} from 'react-scroll'
 
 const Home = () => {
+  
+useEffect(()=>{
+ let e =  document.getElementById("solution");
+ e.scrollIntoView()
+})
+
   return (
     <div>
-      <div className="landingAboveContainer">
+      <div className="landingAboveContainer" id="landingTop">
         <h1 className="maintitle">
           Download
           <br />
@@ -71,7 +77,7 @@ const Home = () => {
         </p>
         <img src={code} alt="code" className="landingImg3" />
       </div>
-      <div className="landingSolutionContainer" id="solution">
+      <div className="landingSolutionContainer" id="solution" >
         <div>
           <h1 className="landingTitle">We have a solution for you!</h1>
 

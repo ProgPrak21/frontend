@@ -37,9 +37,8 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
   const classes = useStyles();
   return (
-    <div className={classes.container}>
-      <h1 className={classes.title}> we are DARA</h1>
-      <div className={classes.box}>cool Logo</div>
+    <div className={classes.container} id="about">
+      <h2>About Us</h2>
       <p className={classes.text}>
         text about us text about us text about us text about us text about us
         text about us text about us text about us text about us text about us

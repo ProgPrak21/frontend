@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import {  useMemo } from "react";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "./components/Navbar";
@@ -7,7 +7,8 @@ import About from "./components/About";
 import "./App.css";
 
 function App() {
-  const [comp, setComp] = useState("home");
+  
+  
 
   const theme = useMemo(
     () =>
@@ -28,9 +29,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <ApolloProvider client={client}>
         <div className="App">
-          <Navbar setComp={setComp} />
-          {comp === "home" && <Home setComp={setComp} />}
-          {comp === "about" && <About />}
+          <Navbar/>
+          <Home/>
+          <About/>
         </div>
       </ApolloProvider>
     </ThemeProvider>

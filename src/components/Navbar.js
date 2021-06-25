@@ -1,6 +1,8 @@
-import React from "react";
+import React,{useEffect, useRef, useState} from "react";
 import { makeStyles } from "@material-ui/core";
 import logo from "../lib/assets/logoModern2.png";
+import {Link} from 'react-scroll'
+
 
 const useStyles = makeStyles((theme) => ({
   nav: {
@@ -27,8 +29,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Navbar = ({ setComp }) => {
+const Navbar = () => {
   const classes = useStyles();
+
+
+  function hover(e){
+    e.target.style.textShadow='0.3px 0.3px '
+  }
+  function unhover(e){
+    e.target.style.textShadow ='none';
+  }
+  
+  
+  
+ 
+
+
+  
 
   return (
     <div className={classes.nav}>
@@ -40,15 +57,25 @@ const Navbar = ({ setComp }) => {
         height="auto"
       />
 
-      <button className={classes.button} onClick={() => setComp("home")}>
+<Link to="landingTop" spy={true} smooth={true}>
+      <button onMouseOver={hover} onMouseLeave={unhover} className={classes.button} >
         Home
       </button>
-      <button className={classes.button} onClick={() => setComp("about")}>
+      </Link>
+      <Link to="about" spy={true} smooth={true}  className="link1" >
+      <button onMouseOver={hover} onMouseLeave={unhover} className={classes.button} >
         About
       </button>
-      <button className={classes.button}>Download</button>
-      <button className={classes.button}>Analyze</button>
-      <button className={classes.button}>Understand</button>
+      </Link>
+      <Link to="solution" spy={true} smooth={true}  className="link1" >
+      <button onMouseOver={hover} onMouseLeave={unhover} className={classes.button} >Download</button>
+      </Link>
+      <Link to="solution" spy={true} smooth={true} id="link1">
+      <button onMouseOver={hover} onMouseLeave={unhover} className={classes.button} >Analyze</button>
+      </Link>
+      <Link to="solution" spy={true} smooth={true}>
+      <button onMouseOver={hover} onMouseLeave={unhover} className={classes.button} >Understand</button>
+      </Link>
     </div>
   );
 };
