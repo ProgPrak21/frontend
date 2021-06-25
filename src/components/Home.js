@@ -7,16 +7,13 @@ import DragDrop from "./DragDrop";
 import UserData from "./UserData";
 import {Link} from 'react-scroll'
 
-const Home = () => {
+const Home = ({setPlace}) => {
   
-useEffect(()=>{
- let e =  document.getElementById("solution");
- e.scrollIntoView()
-})
+
 
   return (
     <div>
-      <div className="landingAboveContainer" id="landingTop">
+      <div className="landingAboveContainer" id="landingTop" onMouseEnter={() => setPlace("navHome")} >
         <h1 className="maintitle">
           Download
           <br />

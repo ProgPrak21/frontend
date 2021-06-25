@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const About = () => {
+const About = ({setPlace},{setLeft}) => {
   const classes = useStyles();
   return (
-    <div className={classes.container} id="about">
+    <div className={classes.container} id="about" onMouseEnter={() => setPlace("navAbout")} >
       <h2>About Us</h2>
       <p className={classes.text}>
         text about us text about us text about us text about us text about us
