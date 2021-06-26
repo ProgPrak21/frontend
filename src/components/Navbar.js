@@ -1,8 +1,7 @@
-import React,{useEffect, useRef, useState} from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core";
 import logo from "../lib/assets/logoModern2.png";
-import {Link} from 'react-scroll'
-
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   nav: {
@@ -29,37 +28,32 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Navbar = ({place},{left}) => {
+const Navbar = ({ place }, { left }) => {
   const classes = useStyles();
 
-
-  function hover(e){
-    e.target.style.textShadow='0.3px 0.3px '
+  function hover(e) {
+    e.target.style.textShadow = "0.3px 0.3px ";
   }
-  function unhover(e){
-    e.target.style.textShadow ='none';
+  function unhover(e) {
+    e.target.style.textShadow = "none";
   }
-  const buttonIds = ["navHome","navAbout","navDownload","navUnderstand","navAnalyse"]
-  
-  useEffect(()=>{
-     buttonIds.forEach(id => {
-      document.getElementById(id).style.textDecoration="none"
-    })
-    let e = document.getElementById(place)
-    console.log(e)
-    e.style.textDecoration="underline"
-    
-   
-  },[place]);
 
-  
-  
-  
-  
- 
+  useEffect(() => {
+    const buttonIds = [
+      "navHome",
+      "navAbout",
+      "navDownload",
+      "navUnderstand",
+      "navAnalyse",
+    ];
 
-
-  
+    buttonIds.forEach((id) => {
+      document.getElementById(id).style.textDecoration = "none";
+    });
+    let e = document.getElementById(place);
+    console.log(e);
+    e.style.textDecoration = "underline";
+  }, [place]);
 
   return (
     <div className={classes.nav}>
@@ -71,24 +65,55 @@ const Navbar = ({place},{left}) => {
         height="auto"
       />
 
-<Link to="landingTop" spy={true} smooth={true}>
-      <button onMouseOver={hover} onMouseLeave={unhover} className={classes.button} id="navHome">
-        Home
-      </button>
+      <Link to="landingTop" spy={true} smooth={true}>
+        <button
+          onMouseOver={hover}
+          onMouseLeave={unhover}
+          className={classes.button}
+          id="navHome"
+        >
+          Home
+        </button>
       </Link>
-      <Link to="about" spy={true} smooth={true}  className="link1" >
-      <button onMouseOver={hover} onMouseLeave={unhover} className={classes.button} id="navAbout">
-        About
-      </button>
+      <Link to="about" spy={true} smooth={true} className="link1">
+        <button
+          onMouseOver={hover}
+          onMouseLeave={unhover}
+          className={classes.button}
+          id="navAbout"
+        >
+          About
+        </button>
       </Link>
-      <Link to="solution" spy={true} smooth={true}  className="link1" >
-      <button onMouseOver={hover} onMouseLeave={unhover} className={classes.button} id="navDownload">Download</button>
+      <Link to="solution" spy={true} smooth={true} className="link1">
+        <button
+          onMouseOver={hover}
+          onMouseLeave={unhover}
+          className={classes.button}
+          id="navDownload"
+        >
+          Download
+        </button>
       </Link>
       <Link to="solution" spy={true} smooth={true} id="link1">
-      <button onMouseOver={hover} onMouseLeave={unhover} className={classes.button} id="navAnalyse" >Analyse</button>
+        <button
+          onMouseOver={hover}
+          onMouseLeave={unhover}
+          className={classes.button}
+          id="navAnalyse"
+        >
+          Analyse
+        </button>
       </Link>
       <Link to="solution" spy={true} smooth={true}>
-      <button onMouseOver={hover} onMouseLeave={unhover} className={classes.button} id="navUnderstand">Understand</button>
+        <button
+          onMouseOver={hover}
+          onMouseLeave={unhover}
+          className={classes.button}
+          id="navUnderstand"
+        >
+          Understand
+        </button>
       </Link>
     </div>
   );
