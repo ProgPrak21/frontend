@@ -46,13 +46,19 @@ const DragDrop = () => {
   const classes = useStyles();
 
   const [service, setService] = useState("facebook");
+  const [userId, setUserId] = useState("");
+  const [secret, setSecret] = useState("");
+
+  const copy = async (text) => {
+    await navigator.clipboard.writeText(text);
+  };
 
   async function uploadFile(file) {
     const blob = new Blob([file], {
       type: "application/json",
     });
     const data = new FormData();
-    data.append(service, blob);
+    data.append("file1", blob);
 
     await fetch(`https://dara.gwhy.de/data/${service}/advertisement`, {
       method: "POST",
@@ -64,6 +70,8 @@ const DragDrop = () => {
       .then((response) => response.json())
       .then((success) => {
         console.log(success);
+        setUserId(success.uid);
+        setSecret(success.secret);
       })
       .catch((error) => console.log(error));
   }
@@ -124,6 +132,28 @@ const DragDrop = () => {
         >
           Submit
         </Button>
+      </div>
+      <div style={{ margin: "20px" }}>
+        <span style={{ color: "white", padding: "5px" }}>
+          User Id:{" "}
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => copy(userId)}
+          >
+            {userId}
+          </Button>
+        </span>
+        <span style={{ color: "white" }}>
+          Secret:{" "}
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => copy(secret)}
+          >
+            {secret}
+          </Button>
+        </span>
       </div>
     </div>
   );
