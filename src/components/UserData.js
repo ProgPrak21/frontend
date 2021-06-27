@@ -9,7 +9,7 @@ export default function UserData() {
   const [secret, setSecret] = useState("");
 
   const [getData, { loading, error, data }] = useLazyQuery(GET_USER_DATA, {
-    variables: { secret, userId },
+    fetchPolicy: "network-only",
     onCompleted: () => {
       console.log(data);
     },
@@ -17,6 +17,10 @@ export default function UserData() {
       console.log(error);
     },
   });
+
+  const onAnalyseClick = () => {
+    getData({ variables: { secret, userId } });
+  };
 
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
@@ -26,17 +30,21 @@ export default function UserData() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <form noValidate autoComplete="off">
           <TextField
-            onChange={({ target }) => setUserId(target.value)}
+            onChange={({ target: { value } }) => setUserId(value)}
             label="User ID"
             variant="outlined"
           />
           <TextField
-            onChange={({ target }) => setSecret(target.value)}
+            onChange={({ target: { value } }) => setSecret(value)}
             label="Secret"
             variant="outlined"
           />
         </form>
-        <Button onClick={() => getData()} color="primary" variant="contained">
+        <Button
+          onClick={() => onAnalyseClick()}
+          color="primary"
+          variant="contained"
+        >
           Analyse
         </Button>
       </div>
