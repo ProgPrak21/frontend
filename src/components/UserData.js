@@ -1,22 +1,42 @@
 import { useLazyQuery } from "@apollo/client";
-import { GET_USER_DATA } from "../graphql/get-user-data";
+import { GET_USER_ANALYSED_DATA } from "../graphql/get-user-data";
 // import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Button } from "@material-ui/core";
 import { useState } from "react";
+import {
+  MainContainer,
+  Container,
+  BarChartContainer,
+  Number,
+  BlackLine,
+  MakeBar,
+} from "./chart/styles";
 
 export default function UserData() {
+  const getRandomColor = () => {
+    var letters = "0123456789ABCDEF";
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
   const [userId, setUserId] = useState("");
   const [secret, setSecret] = useState("");
 
-  const [getData, { loading, error, data }] = useLazyQuery(GET_USER_DATA, {
-    fetchPolicy: "network-only",
-    onCompleted: () => {
-      console.log(data);
-    },
-    onError: () => {
-      console.log(error);
-    },
-  });
+  const [getData, { loading, error, data }] = useLazyQuery(
+    GET_USER_ANALYSED_DATA,
+    {
+      fetchPolicy: "network-only",
+      onCompleted: () => {
+        console.log(data);
+      },
+      onError: () => {
+        console.log(error);
+      },
+    }
+  );
 
   const onAnalyseClick = () => {
     getData({ variables: { secret, userId } });
@@ -49,6 +69,42 @@ export default function UserData() {
         </Button>
       </div>
       <div style={{ color: "white" }}>data will be here!</div>
+      {data && (
+        <div>
+          <Container>
+            <MainContainer>
+              {data.UserData.map(({ topic, weight }, i) => {
+                const color = getRandomColor();
+                return (
+                  <BarChartContainer key={i}>
+                    <Number color={color}>{topic}</Number>
+                    <MakeBar height={weight * 20} color={color} />
+                  </BarChartContainer>
+                );
+              })}
+            </MainContainer>
+            <BlackLine />
+          </Container>
+        </div>
+      )}
+      {data && (
+        <div>
+          <Container>
+            <MainContainer>
+              {data.UserData.map(({ topic, weight }, i) => {
+                const color = getRandomColor();
+                return (
+                  <BarChartContainer key={i}>
+                    <Number color={color}>{topic}</Number>
+                    <MakeBar height={weight * 20} color={color} />
+                  </BarChartContainer>
+                );
+              })}
+            </MainContainer>
+            <BlackLine />
+          </Container>
+        </div>
+      )}
     </div>
   );
 }
