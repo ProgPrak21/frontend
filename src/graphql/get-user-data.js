@@ -1,12 +1,10 @@
 import { gql } from "@apollo/client";
 
-export const GET_USER_DATA = gql`
-  query UserData($secret: String, $userId: String) {
-    UserData(secret: $secret, userId: $userId) {
-      userId
-      company
+export const GET_USER_ANALYSED_DATA = gql`
+  query UserDataAnalyzed($userId: String, $secret: String) {
+    UserDataAnalyzed(userId: $userId, secret: $secret) {
       topic
-      weight
+      percentage
     }
   }
 `;
