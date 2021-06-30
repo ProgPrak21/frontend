@@ -76,7 +76,7 @@ export default function UserData() {
         </Button>
       </div>
       <div style={{ color: "white" }}>data will be here!</div>
-      {data.UserData && (
+      {data?.UserData && (
         <div>
           <Container>
             <MainContainer>
