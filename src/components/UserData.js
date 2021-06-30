@@ -22,6 +22,13 @@ export default function UserData() {
     return color;
   };
 
+  const mockData = [
+    { topic: "gaming", percentage: 37 },
+    { topic: "shopping", percentage: 14 },
+    { topic: "electronics", percentage: 23 },
+    { topic: "social media", percentage: 17 },
+  ];
+
   const [userId, setUserId] = useState("");
   const [secret, setSecret] = useState("");
 
@@ -69,11 +76,11 @@ export default function UserData() {
         </Button>
       </div>
       <div style={{ color: "white" }}>data will be here!</div>
-      {data && (
+      {data.UserData && (
         <div>
           <Container>
             <MainContainer>
-              {data.UserData.map(({ topic, weight }, i) => {
+              {data.UserData?.map(({ topic, weight }, i) => {
                 const color = getRandomColor();
                 return (
                   <BarChartContainer key={i}>
@@ -87,16 +94,18 @@ export default function UserData() {
           </Container>
         </div>
       )}
-      {data && (
+      {mockData && (
         <div>
           <Container>
             <MainContainer>
-              {data.UserData.map(({ topic, weight }, i) => {
+              {mockData.map(({ topic, percentage }, i) => {
                 const color = getRandomColor();
                 return (
                   <BarChartContainer key={i}>
-                    <Number color={color}>{topic}</Number>
-                    <MakeBar height={weight * 20} color={color} />
+                    <Number color={color}>
+                      {topic} {percentage}%
+                    </Number>
+                    <MakeBar height={percentage * 2} color={color} />
                   </BarChartContainer>
                 );
               })}
