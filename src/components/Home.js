@@ -1,19 +1,20 @@
-import React,{useEffect,useRef} from "react";
+import React from "react";
 import worldSocialCircle from "../lib/assets/worldSocialCircle2.jpg";
 import maze from "../lib/assets/maze.jpg";
 import code from "../lib/assets/code.png";
 import { Button, Card, CardContent } from "@material-ui/core";
 import DragDrop from "./DragDrop";
 import UserData from "./UserData";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
 
-const Home = ({setPlace}) => {
-  
-
-
+const Home = ({ setPlace }) => {
   return (
     <div>
-      <div className="landingAboveContainer" id="landingTop" onMouseEnter={() => setPlace("navHome")} >
+      <div
+        className="landingAboveContainer"
+        id="landingTop"
+        onMouseEnter={() => setPlace("navHome")}
+      >
         <h1 className="maintitle">
           Download
           <br />
@@ -27,9 +28,9 @@ const Home = ({setPlace}) => {
           with the help of our all in one free toolkit
         </h2>
         <Link to="solution" spy={true} smooth={true}>
-        <Button variant="contained" color="primary">
-          Get Started
-        </Button>
+          <Button variant="contained" color="primary">
+            Get Started
+          </Button>
         </Link>
       </div>
 
@@ -74,13 +75,13 @@ const Home = ({setPlace}) => {
         </p>
         <img src={code} alt="code" className="landingImg3" />
       </div>
-      <div className="landingSolutionContainer" id="solution" >
+      <div className="landingSolutionContainer" id="solution">
         <div>
           <h1 className="landingTitle">We have a solution for you!</h1>
 
           <p className="landingText">in just 3 Steps</p>
         </div>
-        <div className="landingSolutionCardsContainer" >
+        <div className="landingSolutionCardsContainer">
           <Card className="landingSolutionCard">
             <h2>1.Download our Extension</h2>
             <CardContent>

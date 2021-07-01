@@ -1,21 +1,24 @@
-import {  useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import About from "./components/About";
+// import About from "./components/About";
 import "./App.css";
 
 function App() {
-  
-  const [place, setPlace]= useState("navHome");
-  
+  const [place, setPlace] = useState("navHome");
 
   const theme = useMemo(
     () =>
       createMuiTheme({
         palette: {
           type: "dark",
+        },
+        typography: {
+          button: {
+            textTransform: "none",
+          },
         },
       }),
     []
@@ -26,15 +29,13 @@ function App() {
     cache: new InMemoryCache(),
   });
 
-  
-
   return (
     <ThemeProvider theme={theme}>
       <ApolloProvider client={client}>
         <div className="App">
           <Navbar place={place} />
           <Home setPlace={setPlace} />
-          <About setPlace={setPlace} />
+          {/* <About setPlace={setPlace} /> */}
         </div>
       </ApolloProvider>
     </ThemeProvider>
