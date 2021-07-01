@@ -1,6 +1,5 @@
 import { useLazyQuery } from "@apollo/client";
 import { GET_USER_ANALYSED_DATA } from "../graphql/get-user-data";
-// import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Button } from "@material-ui/core";
 import { useState } from "react";
 import {
@@ -21,13 +20,6 @@ export default function UserData() {
     }
     return color;
   };
-
-  const mockData = [
-    { topic: "gaming", percentage: 37 },
-    { topic: "shopping", percentage: 14 },
-    { topic: "electronics", percentage: 23 },
-    { topic: "social media", percentage: 17 },
-  ];
 
   const [userId, setUserId] = useState("");
   const [secret, setSecret] = useState("");
@@ -76,36 +68,21 @@ export default function UserData() {
         </Button>
       </div>
       <div style={{ color: "white" }}>data will be here!</div>
-      {data?.UserData && (
+      {data?.UserDataAnalyzed && (
         <div>
           <Container>
             <MainContainer>
-              {data.UserData?.map(({ topic, weight }, i) => {
+              {data.UserDataAnalyzed?.map(({ topic, percentage }, i) => {
                 const color = getRandomColor();
                 return (
                   <BarChartContainer key={i}>
-                    <Number color={color}>{topic}</Number>
-                    <MakeBar height={weight * 20} color={color} />
-                  </BarChartContainer>
-                );
-              })}
-            </MainContainer>
-            <BlackLine />
-          </Container>
-        </div>
-      )}
-      {mockData && (
-        <div>
-          <Container>
-            <MainContainer>
-              {mockData.map(({ topic, percentage }, i) => {
-                const color = getRandomColor();
-                return (
-                  <BarChartContainer key={i}>
-                    <Number color={color}>
-                      {topic} {percentage}%
-                    </Number>
-                    <MakeBar height={percentage * 2} color={color} />
+                    <Number color={color}>{`${topic} ${(
+                      percentage * 100
+                    ).toFixed(0)} %`}</Number>
+                    <MakeBar
+                      height={(percentage * 100).toFixed(0)}
+                      color={color}
+                    />
                   </BarChartContainer>
                 );
               })}

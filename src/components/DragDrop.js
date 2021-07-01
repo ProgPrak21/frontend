@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useCallback } from "react";
 import { makeStyles, Button } from "@material-ui/core";
 import { useDropzone } from "react-dropzone";
 import Select from "./Select";
+import axios from "axios";
 
 const baseStyle = {
   flex: 1,
@@ -48,33 +49,18 @@ const DragDrop = () => {
   const [service, setService] = useState("facebook");
   const [userId, setUserId] = useState("");
   const [secret, setSecret] = useState("");
+  const [file, setFile] = useState(null);
 
   const copy = async (text) => {
     await navigator.clipboard.writeText(text);
   };
 
-  async function uploadFile(file) {
-    const blob = new Blob([file], {
-      type: "application/json",
-    });
-    const data = new FormData();
-    data.append("file1", blob);
-
-    await fetch(`https://dara.gwhy.de/data/${service}/advertisement`, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-      },
-      body: data,
-    })
-      .then((response) => response.json())
-      .then((success) => {
-        console.log(success);
-        setUserId(success.uid);
-        setSecret(success.secret);
-      })
-      .catch((error) => console.log(error));
-  }
+  const onDrop = useCallback((acceptedFiles) => {
+    for (let i = 0; i < acceptedFiles.length; i++) {
+      console.log(acceptedFiles[i]);
+      setFile(acceptedFiles[i]);
+    }
+  }, []);
 
   const {
     acceptedFiles,
@@ -85,14 +71,21 @@ const DragDrop = () => {
     isDragReject,
   } = useDropzone({
     accept: "application/json",
+    onDrop: onDrop,
   });
 
-  function upload() {
-    for (let i = 0; i < acceptedFiles.length; i++) {
-      console.log(acceptedFiles[i]);
-      uploadFile(acceptedFiles[i]);
-    }
-  }
+  const onClickHandler = () => {
+    const data = new FormData();
+    data.append("file1", file);
+
+    axios
+      .post(`https://dara.gwhy.de/data/${service}/advertisement`, data, {})
+      .then((res) => {
+        console.log(res);
+        setUserId(res.data.uid);
+        setSecret(res.data.secret);
+      });
+  };
 
   const style = useMemo(
     () => ({
@@ -116,6 +109,7 @@ const DragDrop = () => {
         <input {...getInputProps()} />
         <p className={classes.txt}>Drop file(s) here or click to upload</p>
       </div>
+
       <aside>
         <h4 className={classes.txt}>Files</h4>
         <ul className={classes.txt}>{files}</ul>
@@ -125,7 +119,7 @@ const DragDrop = () => {
         <Select service={service} setService={setService} />
 
         <Button
-          onClick={upload}
+          onClick={onClickHandler}
           variant="contained"
           color="primary"
           component="span"
