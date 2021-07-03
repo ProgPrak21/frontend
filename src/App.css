@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
 
 .App {
@@ -42,16 +43,25 @@
 }
 /* Home/Landing page */
 /* text and headlines*/
-.maintitle {
-  font-family: "Odibee Sans", cursive;
-  color: white;
+.maintitle{
+  font-family: 'Odibee Sans', cursive;
+  color:white;
   margin: 0px;
-  font-size: 5em;
-  text-align: center;
+  font-size: 6em;
   padding-top: 100px;
+  text-align: center
 }
-.subTitle {
-  color: white;
+.submaintitle{
+  font-family: 'Odibee Sans', cursive;
+    color:white;
+    margin: 0px;
+    font-size: 6em;
+    padding-top: 100px;
+    text-align: left;
+    margin-left: 43%;
+}
+.subTitle{
+  color:white;
 }
 .landingText {
   color: white;
@@ -59,8 +69,8 @@
 }
 .landingTitle {
   color: white;
-  margin: 0px;
-  padding: none;
+  margin:0px;
+  padding:none;
 }
 /*containers and content */
 .landingAboveContainer {
@@ -71,79 +81,143 @@
   padding-bottom: 4em;
 }
 
-.landingPitch1Container {
-  padding-top: 70px;
-  display: flex;
-  flex-direction: column;
+.landingAboveContainer2 {
+  background-image: url("lib/assets/darkImg.png");
+  min-width: auto;
+  min-height: 150%;
+  background-size: cover;
   align-items: center;
-  background-color: black;
-  height: 90vh;
-  min-height: 90vh;
   justify-content: center;
-  padding-bottom: 100px;
+  padding-bottom: 10.5em;
 }
 
-.landingImg1 {
-  margin-top: "40px";
-  width: 500px;
-  height: auto;
+.landingPitch1Container {
+  padding-top:70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  height: 90vh;
+  min-height: 90vh;
+  justify-content:center;
+  padding-bottom:100px;
+}
+
+.landingImg1{
+  margin-top:"40px";
+    width:500px;
+    height:auto;
 }
 .landingPitch2Container {
-  padding-top: 70px;
+  padding-top:70px;
   display: flex;
   align-items: center;
   background-color: black;
   height: 90vh;
   min-height: 90vh;
-  justify-content: space-around;
-  padding-bottom: 100px;
-  padding-top: 20px;
+  justify-content:space-around;
+  padding-bottom:100px;
+  padding-top:20px;
 }
-.landingImg2 {
-  margin-right: 20px;
-  margin-bottom: 20px;
-  width: 45%;
-  height: auto;
-  max-height: 90vh;
-}
-.LandingPitch3Container {
-  padding-top: 70px;
+.landingImg2{
+  margin-right:20PX;
+    margin-bottom:20px;
+    width:45%;
+     height:auto;
+     max-height:90vh;
+     }
+
+.landingImg4{
+   margin-right:20PX;
+     margin-bottom:20px;
+     width:auto;
+      height:30%;
+      max-height:90vh;
+      }
+.landingImg5{
+   margin-right:20PX;
+     margin-bottom:20px;
+     width:auto;
+      height:15%;
+      max-height:90vh;
+      }
+
+.LandingPitch4Container {
+  padding-top:70px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   background-color: black;
   height: 90vh;
   min-height: 80vh;
   justify-content: space-around;
-  padding-bottom: 100px;
-  padding-top: 20px;
+  padding-bottom:100px;
+  padding-top:20px;
   padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 50px;
 }
-.landingImg3 {
-  width: 50%;
-  height: auto;
+.landingImg3{
+    width:50%;
+    height:auto;
+
 }
-.landingSolutionContainer {
+.landingSolutionContainer{
+
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: black;
-  justify-content: space-around;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  justify-content:space-around;
+  padding-bottom:20px;
+  padding-top:20px;
   padding-right: 50px;
   padding-left: 50px;
+
 }
-.landingSolutionCardsContainer {
+.landingSolutionCardsContainer{
   display: flex;
-  justify-content: space-around;
+  justify-content:space-around;
   align-items: strech;
 }
-.landingSolutionCard {
+.landingSolutionCard{
   margin: 20px 20px 20px 20px;
+
 }
 
-.root {
-  margin: 20px;
+.landingPitch6Container {
+  padding-top:70px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background-color: black;
+  height: 90vh;
+  min-height: 90vh;
+  justify-content:space-around;
+  margin-bottom:-300px;
+  margin-top: 0px;
+  margin-right: 200px;
+  margin-left: 180px;
+  a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+}
+color{
+color:#5aadaa;
 }
