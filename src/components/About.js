@@ -48,7 +48,7 @@ const About = () => {
       </h1>
       </div>
 
-    <div className="landingPitch7Container">
+    <div className="landingPitch7Container" id="about">
              <img src={DARA} alt="DARA" className="landingImg4" />
              <div>
                <h1 className="landingTitle">
