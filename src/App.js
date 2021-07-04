@@ -3,7 +3,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-// import About from "./components/About";
+import About from "./components/About";
 import "./App.css";
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
         <div className="App">
           <Navbar place={place} />
           <Home setPlace={setPlace} />
-          {/* <About setPlace={setPlace} /> */}
+          <About setPlace={setPlace} />
         </div>
       </ApolloProvider>
     </ThemeProvider>
