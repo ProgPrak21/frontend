@@ -43,12 +43,12 @@ const About = () => {
   <div>
     <div className="landingAboveContainer2">
      <h1 className="submaintitle">
-                      <color>D</color>ata <br /> <color>A</color>ccess <br /> <color>R</color>equest  <br /> <color>A</color>nalysis
+                   <color>D</color>ata <br /> <color>A</color>ccess <br /> <color>R</color>equest  <br /> <color>A</color>nalysis
 
       </h1>
       </div>
 
-    <div className="landingPitch6Container">
+    <div className="landingPitch7Container">
              <img src={DARA} alt="DARA" className="landingImg4" />
              <div>
                <h1 className="landingTitle">
@@ -61,13 +61,13 @@ const About = () => {
              </div>
            </div>
             <div className="landingPitch6Container">
-                        <img src={TUBerlin} alt="TUBerlin" className="landingImg5" />
+                        <img src={TUBerlin} alt="TUBerlin" className="landingImg6" />
                         <div>
                           <h1 className="landingTitle">
                             About us
                           </h1>
                           <p className="landingText">
-                            Hey there &#128075;, we are a group of 7 students from TU-Berlin, interested in privacy and tracking on the web. As part of a practical programming module at ISE (Information System Engineering) we decided to realize DARA. <br />
+                            Hey there &#128075;, we are a group of 7 students from TU-Berlin, interested in privacy and tracking on the web. <br /> As part of a practical programming module at ISE (Information System Engineering) we decided to realize DARA. <br />
                             <a href="https://github.com/ProgPrak21" target="_blank">Our Github page</a>                          </p>
                         </div>
                       </div>

@@ -71,6 +71,7 @@
   color: white;
   margin:0px;
   padding:none;
+  text-align: center;
 }
 /*containers and content */
 .landingAboveContainer {
@@ -78,17 +79,20 @@
   min-width: 100%;
   min-height: 100%;
   background-size: cover;
-  padding-bottom: 4em;
+  padding-bottom: -5em;
 }
 
 .landingAboveContainer2 {
-  background-image: url("lib/assets/darkImg.png");
+  background-image: url("lib/assets/earth-1149733_1920.jpg");
   min-width: auto;
-  min-height: 150%;
+  min-height: 120%;
   background-size: cover;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
-  padding-bottom: 10.5em;
+  padding-bottom: 5em;
+  padding-top:0em;
+  margin-top: 300px;
+  margin-bottom: -0em;
 }
 
 .landingPitch1Container {
@@ -118,6 +122,7 @@
   justify-content:space-around;
   padding-bottom:100px;
   padding-top:20px;
+  margin-top: 80px;
 }
 .landingImg2{
   margin-right:20PX;
@@ -140,7 +145,16 @@
      width:auto;
       height:15%;
       max-height:90vh;
-      }
+}
+.landingImg6{
+   margin-right:50PX;
+   margin-left: 150px;
+     margin-bottom:20px;
+     width:auto;
+      height:15%;
+      max-height:90vh;
+}
+
 
 .LandingPitch4Container {
   padding-top:70px;
@@ -187,36 +201,32 @@
 .landingPitch6Container {
   padding-top:70px;
   display: flex;
-  align-items: center;
-  text-align: left;
+  align-items: flex-start;
+  text-align: center;
   background-color: black;
   height: 90vh;
   min-height: 90vh;
-  justify-content:space-around;
+  justify-content:center;
   margin-bottom:-300px;
-  margin-top: 0px;
-  margin-right: 200px;
-  margin-left: 180px;
-  a:link {
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:visited {
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-  }
+  margin-top: 45px;
+  margin-right: 180px;
+  margin-left: 80px;
+}
+.landingPitch7Container {
+  padding-top:70px;
+  display: flex;
+  align-items: flex-start;
+  background-color: black;
+  height: 90vh;
+  min-height: 90vh;
+  justify-content:center;
+  margin-bottom: -350px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-right: 100px;
+  margin-left: 80px;
+  margin-top: 8em;
+  margin-bottom:-550px;
 }
 color{
 color:#5aadaa;
