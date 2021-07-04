@@ -41,14 +41,14 @@ const About = () => {
   //const classes = useStyles();
   return (
   <div>
-    <div className="landingAboveContainer2">
+    <div className="landingAboveContainer2" id="about">
      <h1 className="submaintitle">
                    <color>D</color>ata <br /> <color>A</color>ccess <br /> <color>R</color>equest  <br /> <color>A</color>nalysis
 
       </h1>
       </div>
 
-    <div className="landingPitch7Container" id="about">
+    <div className="landingPitch7Container" >
              <img src={DARA} alt="DARA" className="landingImg4" />
              <div>
                <h1 className="landingTitle">
