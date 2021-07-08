@@ -35,6 +35,7 @@ export default function SimpleSelect({ service, setService }) {
           <MenuItem value={"facebook"}>Facebook</MenuItem>
           <MenuItem value={"instagram"}>Instagram</MenuItem>
           <MenuItem value={"linkedin"}>LinkedIn</MenuItem>
+          <MenuItem value={"google"}>Google</MenuItem>
         </Select>
       </FormControl>
     </div>
