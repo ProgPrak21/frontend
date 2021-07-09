@@ -95,7 +95,7 @@
   justify-content: center;
   padding-bottom: 5em;
   padding-top: 0em;
-  margin-top: 300px;
+  margin-top: 20vh;
   margin-bottom: -0em;
 }
 
@@ -198,7 +198,7 @@
 }
 
 .landingPitch6Container {
-  padding-top: 70px;
+  padding-top: 7vh;
   display: flex;
   align-items: flex-start;
   text-align: center;
@@ -206,26 +206,26 @@
   height: 90vh;
   min-height: 90vh;
   justify-content: center;
-  margin-bottom: -300px;
-  margin-top: 45px;
-  margin-right: 180px;
-  margin-left: 80px;
+  margin-bottom: -20vh;
+  margin-top: 5vh;
+  margin-right: 20vh;
+  margin-left: 8vh;
 }
 .landingPitch7Container {
-  padding-top: 70px;
+  padding-top: 10vh;
   display: flex;
   align-items: flex-start;
   background-color: black;
   height: 90vh;
   min-height: 90vh;
   justify-content: center;
-  margin-bottom: -350px;
-  padding-bottom: 0px;
-  padding-top: 0px;
-  margin-right: 100px;
-  margin-left: 80px;
+  margin-bottom: -15vh;
+  padding-bottom: 0vh;
+  padding-top: 0vh;
+  margin-right: 15vh;
+  margin-left: 12vh;
   margin-top: 8em;
-  margin-bottom: -550px;
+  margin-bottom: -55vh;
 }
 color {
   color: #5aadaa;
