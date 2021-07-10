@@ -8,3 +8,14 @@ export const GET_USER_ANALYSED_DATA = gql`
     }
   }
 `;
+
+export const GET_USER_ANALYSED_COORDS = gql`
+  query UserCoordsAnalyzed($userId: String, $secret: String) {
+    UserCoordsAnalyzed(userId: $userId, secret: $secret) {
+      latitude
+      longitude
+      anzahl
+      company
+    }
+  }
+`;
