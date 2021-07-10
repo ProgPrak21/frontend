@@ -14,6 +14,7 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const Map = ({ data }) => {
+  if (!data) return;
   console.log(data);
 
   return (

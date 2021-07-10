@@ -114,9 +114,10 @@ export default function UserData() {
           }
         />
       </div>
-      <div style={{ color: "white" }}>data will be here!</div>
-      {locationData.data && <Map data={locationData.data.UserCoordsAnalyzed} />}
-      {data?.UserDataAnalyzed && (
+      {locationData.data?.UserCoordsAnalyzed && (
+        <Map data={locationData.data.UserCoordsAnalyzed} />
+      )}
+      {data?.UserDataAnalyzed.length && (
         <div>
           <Container>
             <MainContainer>
