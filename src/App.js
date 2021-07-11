@@ -1,13 +1,16 @@
 import { useMemo, useState } from "react";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import "./App.css";
+
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Download from "./components/Download";
-
-import "./App.css";
 import EducationalPart from "./components/EducationalPart";
+import DragDrop from "./components/DragDrop";
+import UserData from "./components/UserData";
+
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 function App() {
   const [place, setPlace] = useState("navHome");
@@ -39,9 +42,9 @@ function App() {
           <Navbar place={place} />
           <Home setPlace={setPlace} />
 
-          <Download setPlace={setPlace} ></Download>
-          <About setPlace={setPlace} />
-
+          <Download setPlace={setPlace} />
+          <DragDrop />
+          <UserData />
           <EducationalPart setPlace={setPlace} />
           <About setPlace={setPlace} />
         </div>

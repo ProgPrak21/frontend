@@ -3,8 +3,6 @@ import worldSocialCircle from "../lib/assets/worldSocialCircle2.jpg";
 import maze from "../lib/assets/maze.jpg";
 import code from "../lib/assets/code.png";
 import { Button, Card, CardContent } from "@material-ui/core";
-import DragDrop from "./DragDrop";
-import UserData from "./UserData";
 import { Link } from "react-scroll";
 
 const Home = ({ setPlace }) => {
@@ -111,8 +109,6 @@ const Home = ({ setPlace }) => {
           </Card>
         </div>
       </div>
-      <DragDrop />
-      <UserData />
     </div>
   );
 };

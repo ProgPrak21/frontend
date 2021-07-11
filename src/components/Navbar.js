@@ -75,16 +75,6 @@ const Navbar = ({ place }, { left }) => {
           Home
         </button>
       </Link>
-      <Link to="about" spy={true} smooth={true} className="link1">
-        <button
-          onMouseOver={hover}
-          onMouseLeave={unhover}
-          className={classes.button}
-          id="navAbout"
-        >
-          About
-        </button>
-      </Link>
       <Link to="solution" spy={true} smooth={true} className="link1">
         <button
           onMouseOver={hover}
@@ -123,6 +113,16 @@ const Navbar = ({ place }, { left }) => {
           id="navInformation"
         >
           Information
+        </button>
+      </Link>
+      <Link to="about" spy={true} smooth={true} className="link1">
+        <button
+          onMouseOver={hover}
+          onMouseLeave={unhover}
+          className={classes.button}
+          id="navAbout"
+        >
+          About
         </button>
       </Link>
     </div>
