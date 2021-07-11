@@ -38,7 +38,13 @@ const About = () => {
             interested in privacy and tracking on the web. <br /> As part of a
             practical programming module at ISE (Information System Engineering)
             we decided to realize DARA. <br />
-            <a href="https://github.com/ProgPrak21" rel="noreferrer" target="_blank" >Our Github page</a>{" "}
+            <a
+              href="https://github.com/ProgPrak21"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Our Github page
+            </a>{" "}
           </p>
         </div>
       </div>

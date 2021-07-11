@@ -52,7 +52,6 @@ const Navbar = ({ place }, { left }) => {
       document.getElementById(id).style.textDecoration = "none";
     });
     let e = document.getElementById(place);
-    console.log(e);
     e.style.textDecoration = "underline";
   }, [place]);
 
@@ -116,16 +115,16 @@ const Navbar = ({ place }, { left }) => {
           Understand
         </button>
       </Link>
-       <Link to="Information" spy={true} smooth={true} className="link1">
-              <button
-                onMouseOver={hover}
-                onMouseLeave={unhover}
-                className={classes.button}
-                id="navInformation"
-              >
-                Information
-              </button>
-            </Link>
+      <Link to="Information" spy={true} smooth={true} className="link1">
+        <button
+          onMouseOver={hover}
+          onMouseLeave={unhover}
+          className={classes.button}
+          id="navInformation"
+        >
+          Information
+        </button>
+      </Link>
     </div>
   );
 };

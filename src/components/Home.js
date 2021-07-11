@@ -41,7 +41,7 @@ const Home = ({ setPlace }) => {
             about you?
           </h1>
           <p className="landingText">
-            why you are getting the ads that you are getting? what categories do
+            Why are you getting the ads that you are getting? what categories do
             you fall into?
           </p>
         </div>
@@ -58,9 +58,9 @@ const Home = ({ setPlace }) => {
             But when you tried to find it you couldn't?
           </h1>
           <p className="landingText">
-            data request are often hidden in "dark paths", under a lot of clicks
-            and in places you wouldn't expect. Without knowing ahead where to
-            look you have slim chances of finding it.
+            Data requests are often hidden in "dark paths", under a lot of
+            clicks and in places you wouldn't expect. Without knowing ahead
+            where to look you have slim chances of finding it.
           </p>
         </div>
       </div>
@@ -69,9 +69,9 @@ const Home = ({ setPlace }) => {
           Or if you did find it, you can't understand it?
         </h1>
         <p className="landingText">
-          most companies store data in a machine readable format, which is not
+          Most companies store data in a machine readable format, which is not
           very human friendly. Trying to understand something from a long
-          unending list of values could by a challange.
+          unending list of values could be a challange.
         </p>
         <img src={code} alt="code" className="landingImg3" />
       </div>
@@ -87,15 +87,15 @@ const Home = ({ setPlace }) => {
             <CardContent>
               {" "}
               With the help of our lightweight extension, you can download your
-              data in just one click, check on it's status and download it when
+              data in just one click, check on its status and download it when
               it's ready. The extension is secure since it's all in your browser
-              and open source
+              and open source.
             </CardContent>
           </Card>
           <Card className="landingSolutionCard">
             <h2>2.Analyze your Data-</h2>
             <CardContent>
-              drop your files in our website. In order to keep your privacy, we
+              Drop your files in our website. In order to keep your privacy, we
               take just the files with the advertisement information and analyze
               them for you. You will receive a secret key with which you can log
               in and see your results.
@@ -111,7 +111,6 @@ const Home = ({ setPlace }) => {
           </Card>
         </div>
       </div>
-
       <DragDrop />
       <UserData />
     </div>

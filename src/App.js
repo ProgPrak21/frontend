@@ -9,8 +9,6 @@ import Download from "./components/Download";
 import "./App.css";
 import EducationalPart from "./components/EducationalPart";
 
-
-
 function App() {
   const [place, setPlace] = useState("navHome");
 
@@ -40,9 +38,12 @@ function App() {
         <div className="App">
           <Navbar place={place} />
           <Home setPlace={setPlace} />
+
           <Download setPlace={setPlace} ></Download>
           <About setPlace={setPlace} />
+
           <EducationalPart setPlace={setPlace} />
+          <About setPlace={setPlace} />
         </div>
       </ApolloProvider>
     </ThemeProvider>
