@@ -45,6 +45,7 @@ const Navbar = ({ place }, { left }) => {
       "navDownload",
       "navUnderstand",
       "navAnalyse",
+      "navInformation",
     ];
 
     buttonIds.forEach((id) => {
@@ -115,6 +116,16 @@ const Navbar = ({ place }, { left }) => {
           Understand
         </button>
       </Link>
+       <Link to="Information" spy={true} smooth={true} className="link1">
+              <button
+                onMouseOver={hover}
+                onMouseLeave={unhover}
+                className={classes.button}
+                id="navInformation"
+              >
+                Information
+              </button>
+            </Link>
     </div>
   );
 };
