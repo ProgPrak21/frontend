@@ -45,13 +45,13 @@ const Navbar = ({ place }, { left }) => {
       "navDownload",
       "navUnderstand",
       "navAnalyse",
+      "navInformation",
     ];
 
     buttonIds.forEach((id) => {
       document.getElementById(id).style.textDecoration = "none";
     });
     let e = document.getElementById(place);
-    console.log(e);
     e.style.textDecoration = "underline";
   }, [place]);
 
@@ -73,16 +73,6 @@ const Navbar = ({ place }, { left }) => {
           id="navHome"
         >
           Home
-        </button>
-      </Link>
-      <Link to="about" spy={true} smooth={true} className="link1">
-        <button
-          onMouseOver={hover}
-          onMouseLeave={unhover}
-          className={classes.button}
-          id="navAbout"
-        >
-          About
         </button>
       </Link>
       <Link to="solution" spy={true} smooth={true} className="link1">
@@ -113,6 +103,26 @@ const Navbar = ({ place }, { left }) => {
           id="navUnderstand"
         >
           Understand
+        </button>
+      </Link>
+      <Link to="Information" spy={true} smooth={true} className="link1">
+        <button
+          onMouseOver={hover}
+          onMouseLeave={unhover}
+          className={classes.button}
+          id="navInformation"
+        >
+          Information
+        </button>
+      </Link>
+      <Link to="about" spy={true} smooth={true} className="link1">
+        <button
+          onMouseOver={hover}
+          onMouseLeave={unhover}
+          className={classes.button}
+          id="navAbout"
+        >
+          About
         </button>
       </Link>
     </div>
