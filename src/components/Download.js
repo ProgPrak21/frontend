@@ -5,41 +5,35 @@ import extension_li from "../lib/assets/Extension_fb.PNG";
 const Download = () => {
   return (
     <div className="download">
-      <h1 className="downloadTitle">The Dara Assistent</h1>
+      <h1 className="downloadTitle">The Dara Assistant</h1>
       <div className="downloadContainer">
         <p className="downloadText">
-          DARA Assistant is a browser extension to help you to request your
-          data. It currently includes almost 50 companies, for over 10 of them
-          automated data requests are supported. The rest is annotated with
-          descriptions from
-          <a target="_blank" rel="noreferrer" href="https://justgetmydata.com">
-            just get my data
-          </a>
-          . The DARA Assistant is a non-profit, hobbyist project. All code is
-          open source and waiting for your
-          <a
+          The DARA Assistant is a non-profit, hobbyist project, to help users with requesting their data from companies on the web. 
+          It can execute the clicks necessary to issue a data request on the corresponding data request page. 
+          The Assistant supports just shy of 50 companies and offers fully automated data requests for over 10 of them. 
+          The other companies are annotated with descriptions from <a target="_blank" rel="noreferrer" href="https://justgetmydata.com">
+            just get my data </a>. All code is open source and waiting for your <a
             target="_blank"
             rel="noreferrer"
-            href="https://github.com/ProgPrak21/DARA-Assistant%22%3Econtribution"
+            href="https://github.com/ProgPrak21/DARA-Assistant"
           >
             contribution
-          </a>
-          !
+          </a>.
           <br />
           <br />
           <span className="bButton">
-            <a href="https://chrome.google.com/webstore/detail/dara-assistant/heolgaalbnnelipfhbccbkdohecmaimo">
+            <a target="_blank" href="https://chrome.google.com/webstore/detail/dara-assistant/heolgaalbnnelipfhbccbkdohecmaimo">
               <Button variant="contained" color="primary">
                 Get for Chrome
               </Button>
             </a>
           </span>
           <span spanclassName="bButton">
-            <a href="https://addons.mozilla.org/en-US/firefox/addon/dara/">
+            <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/dara/">
               <Button variant="contained" color="primary">
                 Get for Firefox
               </Button>
-            </a>{" "}
+            </a>
           </span>
         </p>
         <img src={extension_li} alt="extension" className="extensionImg" />

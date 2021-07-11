@@ -293,20 +293,15 @@ color {
 
 .downloadText{
   color:white;
-  font-size: 4vh;
+  font-size: 2.5vh;
   width: 40%;
   text-align: center;
   margin: 0 ;
-  
-  
-  
-  
   word-spacing: 1vh;
-
 }
+
 a{
   word-spacing: 0%;
-  margin-left: 2%;
   word-spacing: 0vh;
 }
 .MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary{

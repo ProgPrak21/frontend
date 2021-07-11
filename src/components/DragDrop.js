@@ -105,51 +105,53 @@ const DragDrop = () => {
 
   return (
     <>
-      <h1 className="downloadTitle">Analyse Your Data</h1>
-      <div className={classes.root}>
-        <div {...getRootProps({ style })} className={classes.drop}>
-          <input {...getInputProps()} />
-          <p className={classes.txt}>Drop file(s) here or click to upload</p>
-        </div>
+      <div id="analyse">
+        <h1 className="downloadTitle">Analyse Your Data</h1>
+        <div className={classes.root}>
+          <div {...getRootProps({ style })} className={classes.drop}>
+            <input {...getInputProps()} />
+            <p className={classes.txt}>Drop file(s) here or click to upload</p>
+          </div>
 
-        <aside>
-          <h4 className={classes.txt}>Files</h4>
-          <ul className={classes.txt}>{files}</ul>
-        </aside>
+          <aside>
+            <h4 className={classes.txt}>Files</h4>
+            <ul className={classes.txt}>{files}</ul>
+          </aside>
 
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Select service={service} setService={setService} />
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Select service={service} setService={setService} />
 
-          <Button
-            onClick={onClickHandler}
-            variant="contained"
-            color="primary"
-            component="span"
-          >
-            Submit
-          </Button>
-        </div>
-        <div style={{ margin: "20px" }}>
-          <span style={{ color: "white", padding: "5px" }}>
-            User Id:{" "}
             <Button
+              onClick={onClickHandler}
               variant="contained"
               color="primary"
-              onClick={() => copy(userId)}
+              component="span"
             >
-              {userId}
+              Submit
             </Button>
-          </span>
-          <span style={{ color: "white" }}>
-            Secret:{" "}
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => copy(secret)}
-            >
-              {secret}
-            </Button>
-          </span>
+          </div>
+          <div style={{ margin: "20px" }}>
+            <span style={{ color: "white", padding: "5px" }}>
+              User Id:{" "}
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => copy(userId)}
+              >
+                {userId}
+              </Button>
+            </span>
+            <span style={{ color: "white" }}>
+              Secret:{" "}
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => copy(secret)}
+              >
+                {secret}
+              </Button>
+            </span>
+          </div>
         </div>
       </div>
     </>

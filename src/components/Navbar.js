@@ -43,7 +43,6 @@ const Navbar = ({ place }, { left }) => {
       "navHome",
       "navAbout",
       "navDownload",
-      "navUnderstand",
       "navAnalyse",
       "navInformation",
     ];
@@ -75,7 +74,7 @@ const Navbar = ({ place }, { left }) => {
           Home
         </button>
       </Link>
-      <Link to="solution" spy={true} smooth={true} className="link1">
+      <Link to="download" spy={true} smooth={true} className="link1">
         <button
           onMouseOver={hover}
           onMouseLeave={unhover}
@@ -85,7 +84,7 @@ const Navbar = ({ place }, { left }) => {
           Download
         </button>
       </Link>
-      <Link to="solution" spy={true} smooth={true} id="link1">
+      <Link to="analyse" spy={true} smooth={true} id="link1">
         <button
           onMouseOver={hover}
           onMouseLeave={unhover}
@@ -95,6 +94,7 @@ const Navbar = ({ place }, { left }) => {
           Analyse
         </button>
       </Link>
+      {/*
       <Link to="solution" spy={true} smooth={true}>
         <button
           onMouseOver={hover}
@@ -105,6 +105,7 @@ const Navbar = ({ place }, { left }) => {
           Understand
         </button>
       </Link>
+      */}
       <Link to="Information" spy={true} smooth={true} className="link1">
         <button
           onMouseOver={hover}
@@ -112,7 +113,7 @@ const Navbar = ({ place }, { left }) => {
           className={classes.button}
           id="navInformation"
         >
-          Information
+          Learn
         </button>
       </Link>
       <Link to="about" spy={true} smooth={true} className="link1">
@@ -122,7 +123,7 @@ const Navbar = ({ place }, { left }) => {
           className={classes.button}
           id="navAbout"
         >
-          About
+          About Us
         </button>
       </Link>
     </div>
