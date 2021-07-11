@@ -31,7 +31,7 @@ const EducationalPart = () => {
       </div>
       <h1 className="landingTitle2">
         {" "}
-        Companies like Facebook, Google, Amazon or twitter have the monopoly
+        Companies like Facebook, Google, Amazon or Twitter have the monopoly
         over our data. This is a problem as they engage deeply in our society,
         economy and states…
       </h1>
@@ -133,7 +133,7 @@ const EducationalPart = () => {
         </p>
       </div>
       <div className="LandingPitch3Container">
-        <h1 className="landingTitle">But its not just about you!</h1>
+        <h1 className="landingTitle">But it's not just about you!</h1>
         <p className="landingText2">
           „Only on the basis of the data of millions of "normal citizens" who
           think they have "nothing to hide" can predictive analysis be trained

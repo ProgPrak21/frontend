@@ -41,7 +41,7 @@ const Home = ({ setPlace }) => {
             about you?
           </h1>
           <p className="landingText">
-            why are you getting the ads that you are getting? what categories do
+            Why are you getting the ads that you are getting? what categories do
             you fall into?
           </p>
         </div>
@@ -58,7 +58,7 @@ const Home = ({ setPlace }) => {
             But when you tried to find it you couldn't?
           </h1>
           <p className="landingText">
-            data requests are often hidden in "dark paths", under a lot of
+            Data requests are often hidden in "dark paths", under a lot of
             clicks and in places you wouldn't expect. Without knowing ahead
             where to look you have slim chances of finding it.
           </p>
@@ -69,7 +69,7 @@ const Home = ({ setPlace }) => {
           Or if you did find it, you can't understand it?
         </h1>
         <p className="landingText">
-          most companies store data in a machine readable format, which is not
+          Most companies store data in a machine readable format, which is not
           very human friendly. Trying to understand something from a long
           unending list of values could be a challange.
         </p>
@@ -89,7 +89,7 @@ const Home = ({ setPlace }) => {
               With the help of our lightweight extension, you can download your
               data in just one click, check on its status and download it when
               it's ready. The extension is secure since it's all in your browser
-              and open source
+              and open source.
             </CardContent>
           </Card>
           <Card className="landingSolutionCard">
@@ -111,7 +111,6 @@ const Home = ({ setPlace }) => {
           </Card>
         </div>
       </div>
-
       <DragDrop />
       <UserData />
     </div>
