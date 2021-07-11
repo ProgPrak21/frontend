@@ -14,9 +14,8 @@ const EducationalPart = () => {
             rel="noreferrer"
             target="_blank"
           >
-            doesn't have to
-          </a>{" "}
-          .
+            doesn't have to.
+          </a>
         </h1>
       </div>
       <div>

@@ -7,8 +7,6 @@ import About from "./components/About";
 import "./App.css";
 import EducationalPart from "./components/EducationalPart";
 
-
-
 function App() {
   const [place, setPlace] = useState("navHome");
 
@@ -38,8 +36,8 @@ function App() {
         <div className="App">
           <Navbar place={place} />
           <Home setPlace={setPlace} />
-          <About setPlace={setPlace} />
           <EducationalPart setPlace={setPlace} />
+          <About setPlace={setPlace} />
         </div>
       </ApolloProvider>
     </ThemeProvider>
