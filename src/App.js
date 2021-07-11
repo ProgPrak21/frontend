@@ -4,6 +4,8 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
+import Download from "./components/Download";
+
 import "./App.css";
 import EducationalPart from "./components/EducationalPart";
 
@@ -38,6 +40,7 @@ function App() {
         <div className="App">
           <Navbar place={place} />
           <Home setPlace={setPlace} />
+          <Download setPlace={setPlace} ></Download>
           <About setPlace={setPlace} />
           <EducationalPart setPlace={setPlace} />
         </div>

@@ -260,3 +260,65 @@
 color {
   color: #5aadaa;
 }
+
+/*Download Component*/
+.downloadContainer{
+  display: flex;
+  margin-top: 5vh;
+  
+  
+  align-items: center;
+  justify-content: space-evenly;
+  
+
+
+}
+.extensionImg{
+  
+  height: auto;
+  width: 40%;
+  border-radius: 5%;
+  
+  
+}
+.downloadTitle {
+  font-family: "Odibee Sans", cursive;
+  color: white;
+  margin: 0px;
+  font-size: 10vh;
+  padding-top: 7vh;
+  text-align: center;
+  
+}
+
+.downloadText{
+  color:white;
+  font-size: 4vh;
+  width: 40%;
+  text-align: center;
+  margin: 0 ;
+  
+  
+  
+  
+  word-spacing: 1vh;
+
+}
+a{
+  word-spacing: 0%;
+  margin-left: 2%;
+  word-spacing: 0vh;
+}
+.MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary{
+  margin: 15%;
+}
+.bButton{
+  margin-left: 4%;
+  margin-right: 3%;
+}
+.download{
+  margin-top: 5%;
+}
+
+
+
