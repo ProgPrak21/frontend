@@ -3,8 +3,8 @@ import { Card, CardContent } from "@material-ui/core";
 
 const EducationalPart = () => {
   return (
-    <div>
-      <div className="LandingPitch3Container" id="Information">
+    <div id="Information">
+      <div className="LandingPitch3Container" >
         <h1 className="landingTitle2">
           Does my phone listen to my conversation with my friends to serve me
           creepy ads? <br />

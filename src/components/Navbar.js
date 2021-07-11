@@ -45,7 +45,7 @@ const Navbar = ({ place }, { left }) => {
       "navDownload",
       "navUnderstand",
       "navAnalyse",
-      "navInformation",
+      
     ];
 
     buttonIds.forEach((id) => {
@@ -75,7 +75,7 @@ const Navbar = ({ place }, { left }) => {
           Home
         </button>
       </Link>
-      <Link to="solution" spy={true} smooth={true} className="link1">
+      <Link to="download" spy={true} smooth={true} className="link1">
         <button
           onMouseOver={hover}
           onMouseLeave={unhover}
@@ -85,7 +85,7 @@ const Navbar = ({ place }, { left }) => {
           Download
         </button>
       </Link>
-      <Link to="solution" spy={true} smooth={true} id="link1">
+      <Link to="analyse" spy={true} smooth={true} id="link1">
         <button
           onMouseOver={hover}
           onMouseLeave={unhover}
@@ -95,7 +95,7 @@ const Navbar = ({ place }, { left }) => {
           Analyse
         </button>
       </Link>
-      <Link to="solution" spy={true} smooth={true}>
+      <Link to="Information" spy={true} smooth={true}>
         <button
           onMouseOver={hover}
           onMouseLeave={unhover}
@@ -105,16 +105,7 @@ const Navbar = ({ place }, { left }) => {
           Understand
         </button>
       </Link>
-      <Link to="Information" spy={true} smooth={true} className="link1">
-        <button
-          onMouseOver={hover}
-          onMouseLeave={unhover}
-          className={classes.button}
-          id="navInformation"
-        >
-          Information
-        </button>
-      </Link>
+      
       <Link to="about" spy={true} smooth={true} className="link1">
         <button
           onMouseOver={hover}

@@ -4,8 +4,8 @@ import extension_li from "../lib/assets/Extension_fb.PNG";
 
 const Download = () => {
   return (
-    <div className="download">
-      <h1 className="downloadTitle">The Dara Assistent</h1>
+    <div className="download" id="download">
+      <h1 className="downloadTitle" >The Dara Assistent</h1>
       <div className="downloadContainer">
         <p className="downloadText">
           DARA Assistant is a browser extension to help you to request your

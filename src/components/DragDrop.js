@@ -105,7 +105,7 @@ const DragDrop = () => {
 
   return (
     <>
-      <h1 className="downloadTitle">Analyse Your Data</h1>
+      <h1 className="downloadTitle" id="analyse">Analyse Your Data</h1>
       <div className={classes.root}>
         <div {...getRootProps({ style })} className={classes.drop}>
           <input {...getInputProps()} />
