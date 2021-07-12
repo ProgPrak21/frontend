@@ -3,18 +3,19 @@ import { Card, CardContent } from "@material-ui/core";
 
 const EducationalPart = () => {
   return (
-    <div>
-      <div className="LandingPitch3Container" id="Information">
+    <div id="Information">
+      <div className="LandingPitch3Container">
+        <h1 className="downloadTitle">Learn about Tracking and Privacy</h1>
         <h1 className="landingTitle2">
-          Does my phone listen to my conversation with my friends to serve me
-          creepy ads? <br />
-          No! Because it{" "}
+          Does my phone listen to my conversation with my friends <br />
+          to serve me creepy ads? <br /> No! Because it{" "}
           <a
             href="https://www.eff.org/deeplinks/2018/04/facebook-doesnt-need-listen-through-your-microphone-serve-you-creepy-ads"
             rel="noreferrer"
             target="_blank"
           >
-            doesn't have to.
+            {" "}
+            doesn't have to.{" "}
           </a>
         </h1>
       </div>
@@ -32,8 +33,9 @@ const EducationalPart = () => {
       <h1 className="landingTitle2">
         {" "}
         Companies like Facebook, Google, Amazon or Twitter have the monopoly
-        over our data. This is a problem as they engage deeply in our society,
-        economy and states…
+        over our data. <br />
+        This is a problem as they engage deeply in our society, economy and
+        states…
       </h1>
       <div className="landingSolutionCardsContainer">
         <Card className="landingSolutionCard">
@@ -119,7 +121,7 @@ const EducationalPart = () => {
             target="_blank"
           >
             Datenschutzverein (de)
-          </a>{" "}
+          </a>
         </p>
       </div>
       <div className="LandingPitch3Container">
@@ -287,7 +289,7 @@ const EducationalPart = () => {
           </a>{" "}
           <br />
           <a
-            href="hhttps://switching.software/"
+            href="https://switching.software/"
             rel="noreferrer"
             target="_blank"
           >
