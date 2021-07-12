@@ -54,9 +54,21 @@ const Navbar = ({ place }, { left }) => {
     let e = document.getElementById(place);
     e.style.textDecoration = "underline";
   }, [place]);
+  function underline() {
+    switch(DOMRect.height){
+      case 23: document.getElementById("navHome").style.textDecoration = "underline";
+      break;
+      case 3359: document.getElementById("navDownload").style.textDecoration = "underline";
+      break;
+      case 4106:document.getElementById("navAnalyse").style.textDecoration = "underline";
+      break;
+      default: return;
+    }
+  }
+
 
   return (
-    <div className={classes.nav}>
+    <div className={classes.nav} onScroll={underline}>
       <img
         className={classes.img}
         src={logo}

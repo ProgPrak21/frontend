@@ -34,11 +34,25 @@ function App() {
     uri: "https://dara.gwhy.de/graphql",
     cache: new InMemoryCache(),
   });
+  function underline() {
+    switch(window.innerHeight){
+      case 489:console.log("boo")
+         document.getElementById("navHome").style.textDecoration = "underline";
+      document.querySelector("#navDownload").style.textDecoration="underline";
+      document.querySelector("#root > div > div.makeStyles-nav-91 > a.link1.active").style.textDecoration="underline";
+      break;
+      case 78: document.getElementById("navDownload").style.textDecoration = "underline";
+      break;
+      case 4106:document.getElementById("navAnalyse").style.textDecoration = "underline";
+      break;
+      default: console.log(Window.innerHeight) ; return;
+    }
+  }
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
       <ApolloProvider client={client}>
-        <div className="App">
+        <div className="App" onScroll={underline}>
           <Navbar place={place} />
           <Home setPlace={setPlace} />
 

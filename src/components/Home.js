@@ -100,11 +100,11 @@ const Home = ({ setPlace }) => {
             </CardContent>
           </Card>
           <Card className="landingSolutionCard">
-            <h2>3.Look at your results</h2>
+            <h2>3.Extend your knowledge</h2>
             <CardContent>
               The results can be viewed here on our page, of course only by you
               and the people you decide to share this info with. Now you can
-              understand your data and which categories you were sorted in.
+              understand your data, which categories you were sorted in and read the information we listed down below.
             </CardContent>
           </Card>
         </div>

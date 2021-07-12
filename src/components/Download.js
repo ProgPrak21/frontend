@@ -5,7 +5,7 @@ import extension_li from "../lib/assets/Extension_fb.PNG";
 const Download = () => {
   return (
     <div className="download" id="download">
-      <h1 className="downloadTitle" >The Dara Assistent</h1>
+      <h1 className="downloadTitle" >The Dara Assistant</h1>
       <div className="downloadContainer">
         <p className="downloadText">
           DARA Assistant is a browser extension to help you to request your
@@ -28,14 +28,14 @@ const Download = () => {
           <br />
           <br />
           <span className="bButton">
-            <a href="https://chrome.google.com/webstore/detail/dara-assistant/heolgaalbnnelipfhbccbkdohecmaimo">
+            <a target="_blank" rel="noreferrer" href="https://chrome.google.com/webstore/detail/dara-assistant/heolgaalbnnelipfhbccbkdohecmaimo">
               <Button variant="contained" color="primary">
                 Get for Chrome
               </Button>
             </a>
           </span>
           <span spanclassName="bButton">
-            <a href="https://addons.mozilla.org/en-US/firefox/addon/dara/">
+            <a target="_blank" rel="noreferrer" href="https://addons.mozilla.org/en-US/firefox/addon/dara/">
               <Button variant="contained" color="primary">
                 Get for Firefox
               </Button>
