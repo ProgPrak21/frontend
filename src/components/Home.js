@@ -69,8 +69,8 @@ const Home = ({ setPlace }) => {
         <p className="landingText">
           Most companies store data in a machine readable format, which is not
           very human friendly. <br />
-          Trying to understand something from a long
-          unending list of values could be a challange.
+          Trying to understand something from a long unending list of values
+          could be a challange.
         </p>
         <img src={code} alt="code" className="landingImg3" />
       </div>
