@@ -53,7 +53,7 @@ const EducationalPart = () => {
             main buyer is the advertising industry, but headhunters and HR
             departments of companies also pay for detailed information on
             applicants. The data collections can have a lasting impact on your
-            professional development.
+            development.
           </CardContent>
         </Card>
         <Card className="landingSolutionCard">
@@ -63,7 +63,7 @@ const EducationalPart = () => {
             auctioned off in the background to the highest bidder within
             milliseconds. Whoever wins the auction gets to display a message. At
             the same time, dozens to hundreds of third-party companies are
-            informed with every click
+            informed with every click.
           </CardContent>
         </Card>
       </div>
@@ -91,12 +91,12 @@ const EducationalPart = () => {
           <h2>Movement patterns in the real world are stored</h2>
           <CardContent>
             Your IP address can be used to determine your current location. With
-            the help of databases, even city districts and office buildings can
-            be identified.When using the Internet on the move or at different
+            the help of databases, even city neighborhoods and specific buildings can
+            be identified.When using the Internet on the go or at different
             locations, movement patterns can be evaluated. These movement
             patterns make it possible, for example, to analyze your professional
             activity/unemployment or your social environment. The location data
-            from smartphones reveals who you regularly have a beer with, youe
+            from smartphones reveals who you regularly have a beer with, your
             new love affair, whether you take part in a demonstration and much
             more.
           </CardContent>
@@ -161,7 +161,7 @@ const EducationalPart = () => {
           <br /> Here are some tips on how you can improve your privacy.
         </h1>
         <p className="landingText">
-          Test your digital fingerprint <br />
+          Test Your Digital Fingerprint <br />
           <a href="https://browserleaks.com/" rel="noreferrer" target="_blank">
             browserleaks
           </a>{" "}
@@ -174,7 +174,7 @@ const EducationalPart = () => {
             Cover Your Tracks
           </a>{" "}
           <br />
-          <br /> Protect your data from socialmedia <br />
+          <br /> Protect Your Data From Socialmedia <br />
           <a
             href="https://www.consumerreports.org/privacy/instagram-privacy-settings/"
             rel="noreferrer"
@@ -261,7 +261,7 @@ const EducationalPart = () => {
             Proton Mail
           </a>{" "}
           <br />
-          <br /> Further reading <br />
+          <br /> Further Reading <br />
           <a href="https://privacytools.io/" rel="noreferrer" target="_blank">
             Privacy Tools
           </a>{" "}
